@@ -1,5 +1,7 @@
 <h1> <%= @cocktail.id %>. <%= @cocktail.name %> </h1>
 
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -17,7 +19,7 @@
 
 
       <br>
-      <%= link_to "Edit cocktail name",edit_cocktail_path %>
+      <%= link_to "Edit cocktail",edit_cocktail_path %>
       <br>
       <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
       <br>
